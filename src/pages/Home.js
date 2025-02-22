@@ -45,7 +45,6 @@ const HeroSection = styled(Section)`
 `;
 
 const HeroContent = styled.div`
-  transform: translateY(-20px); /* Moves the content 20px upward */
   display: flex;
   flex-direction: row;
   align-items: center;
