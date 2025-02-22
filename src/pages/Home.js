@@ -41,7 +41,7 @@ const HeroSection = styled(Section)`
   flex-wrap: wrap;
   text-align: left;
   width: 100%;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
 `;
 
 const HeroContent = styled.div`
