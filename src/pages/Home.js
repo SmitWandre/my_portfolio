@@ -24,7 +24,7 @@ const PageContainer = styled.div`
 // Base section style
 const Section = styled(motion.section)`
   min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
