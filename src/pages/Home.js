@@ -59,7 +59,7 @@ const HeroContent = styled.div`
 const HeroText = styled.div`
   flex: 1;
   min-width: 300px;
-  padding-right: 2rem;
+  padding-right: 1rem;
 `;
 
 const HeroImageContainer = styled.div`
@@ -67,11 +67,11 @@ const HeroImageContainer = styled.div`
   min-width: 300px;
   display: flex;
   justify-content: flex-end;
-  padding-left: 2rem;
+  padding-left: 1rem;
 `;
 
 const HeroHeading = styled.h1`
-  font-size: 6rem; /* Very large heading for multiple lines */
+  font-size: 4rem; /* Very large heading for multiple lines */
   margin: 0;
   line-height: 1.2;
 `;
