@@ -3,13 +3,13 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import { ReactTyped } from 'react-typed'; // named export from react-typed
-import { FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt, FaGit } from 'react-icons/fa';
-import { SiC, SiRuby } from 'react-icons/si';
+import { FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt, FaGit, FaLaptopCode } from 'react-icons/fa';
+import { SiC, SiRuby, SiFlask, SiStreamlit } from 'react-icons/si';
 import pfp from '../assets/pfp.JPG'; // Ensure filename & case match exactly
 
 // Fade-in animation for sections
 const fadeIn = keyframes`
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 `;
 
@@ -21,10 +21,10 @@ const PageContainer = styled.div`
   overflow-x: hidden;
 `;
 
-// Base section style with reduced padding
+// Base section style
 const Section = styled(motion.section)`
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,10 +32,8 @@ const Section = styled(motion.section)`
 `;
 
 // ----- HERO SECTION ----- //
-// Overriding the top padding to reduce spacing between the menu and hero section.
 const HeroSection = styled(Section)`
   background: #111;
-  padding-top: 1rem; /* Reduced top padding */
   animation: ${fadeIn} 1s ease-out;
   flex-direction: row;
   align-items: center;
@@ -43,6 +41,7 @@ const HeroSection = styled(Section)`
   flex-wrap: wrap;
   text-align: left;
   width: 100%;
+  padding: 2rem 2rem;
 `;
 
 const HeroContent = styled.div`
@@ -58,7 +57,7 @@ const HeroContent = styled.div`
 const HeroText = styled.div`
   flex: 1;
   min-width: 300px;
-  padding-right: 1rem;  /* Reduced padding */
+  padding-right: 2rem;
 `;
 
 const HeroImageContainer = styled.div`
@@ -66,7 +65,7 @@ const HeroImageContainer = styled.div`
   min-width: 300px;
   display: flex;
   justify-content: flex-end;
-  padding-left: 1rem;  /* Reduced padding */
+  padding-left: 2rem;
 `;
 
 const HeroHeading = styled.h1`
@@ -77,7 +76,7 @@ const HeroHeading = styled.h1`
 
 const HeroSubheading = styled.p`
   font-size: 1.75rem;
-  margin-top: 0.5rem;  /* Reduced margin */
+  margin-top: 1rem;
   color: #ccc;
 `;
 
@@ -92,13 +91,12 @@ const HeroImage = styled(motion.img)`
 const AboutSection = styled(Section)`
   background: #000;
   border-top: 1px solid #333;
-  padding: 2rem 1rem;  /* Reduced padding */
 `;
 
 // Python window styling
 const PythonWindow = styled(motion.div)`
   background: #1a1a1a;
-  width: 90%;              /* Slightly wider */
+  width: 80%;
   max-width: 800px;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.8);
@@ -119,16 +117,17 @@ const Dot = styled.span`
   border-radius: 50%;
 `;
 
-// Updated pre styling to allow wrapping and ensure full content is visible
+// IMPORTANT: Updated styling to ensure multiline text is fully visible
 const PythonWindowBody = styled.pre`
   background: #1a1a1a;
   padding: 1rem;
-  overflow: auto;
+  overflow: auto;           /* Enables scrolling if content exceeds container */
   color: #c5c8c6;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.1rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  
+  white-space: pre-wrap;    /* Wrap lines instead of cutting off horizontally */
+  word-wrap: break-word;    /* Break long lines or words if needed */
   width: 100%;
 `;
 
@@ -136,19 +135,18 @@ const PythonWindowBody = styled.pre`
 const SkillsSection = styled(Section)`
   background: #111;
   border-top: 1px solid #333;
-  padding: 2rem 1rem;  /* Reduced padding */
 `;
 
 const SkillsHeading = styled.h2`
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;  /* Reduced margin */
+  margin-bottom: 2rem;
 `;
 
 const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;  /* Reduced gap */
+  gap: 2rem;
 `;
 
 const SkillItem = styled.div`
@@ -165,17 +163,16 @@ const ContactSection = styled(Section)`
   border-top: 1px solid #333;
   flex-direction: column;
   text-align: center;
-  padding: 2rem 1rem;  /* Reduced padding */
 `;
 
 const ContactHeading = styled.h2`
   font-size: 2.5rem;
-  margin-bottom: 0.75rem;  /* Reduced margin */
+  margin-bottom: 1rem;
 `;
 
 const ContactInfo = styled.div`
   font-size: 1.5rem;
-  margin-bottom: 0.75rem;  /* Reduced margin */
+  margin-bottom: 1rem;
   a {
     color: #1db954;
     text-decoration: none;
@@ -187,7 +184,7 @@ const Home = () => {
     <PageContainer>
       {/* HERO SECTION */}
       <HeroSection
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
@@ -219,7 +216,7 @@ const Home = () => {
 
       {/* ABOUT SECTION */}
       <AboutSection
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
@@ -239,15 +236,15 @@ const Home = () => {
 {`# About Me
 def introduce():
     name = "Smit Wandre"
-    bio = """I'm a passionate software developer who thrives on transforming 
-ideas into reality with a deep love for problem-solving and innovation. 
-I create efficient, scalable solutions that make a real impact. Whether 
-I'm exploring cutting-edge technologies or optimizing a legacy system 
-for optimal performance, I approach each challenge with curiosity and 
-an unwavering commitment to excellence.
-
-I believe in coding not just as a career, but as a journey of continuous 
-learning and pushing the boundaries of what's possible."""
+    bio = """I'm a passionate software developer who thrives on 
+          transforming ideas into elegant code. With a deep love 
+          for problem-solving and innovation, I build dynamic, 
+          efficient applications that make a real impact. Whether 
+          I'm exploring cutting-edge technologies or fine-tuning 
+          a system for optimal performance, I approach each challenge 
+          as an opportunity to learn and grow. I believe in the art 
+          of coding—not just as a career, but as a way of life, fueling 
+          creativity and pushing the boundaries of what's possible."""
     print(f"Hi, I'm {name}! {bio}")
 
 introduce()`}
@@ -257,7 +254,7 @@ introduce()`}
 
       {/* SKILLS SECTION */}
       <SkillsSection
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
@@ -296,31 +293,37 @@ introduce()`}
             <FaGit />
             <p>Git</p>
           </SkillItem>
+          <SkillItem>
+            <SiFlask />
+            <p>Flask</p>
+          </SkillItem>
+          <SkillItem>
+            <SiStreamlit />
+            <p>Streamlit</p>
+          </SkillItem>
+          <SkillItem>
+            <FaLaptopCode />
+            <p>Dafny</p>
+          </SkillItem>
         </SkillList>
       </SkillsSection>
 
       {/* CONTACT SECTION */}
       <ContactSection
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
         <ContactHeading>Contact Me</ContactHeading>
         <ContactInfo>
-          Email: <a href="mailto:smit@example.com">smit@example.com</a>
+          Email: <a href="mailto:wandresmit@gmail.com">wandresmit@gmail.com</a>
         </ContactInfo>
         <ContactInfo>
-          LinkedIn:{' '}
-          <a href="https://www.linkedin.com/in/smitwandre" target="_blank" rel="noopener noreferrer">
-            smitwandre
-          </a>
+          LinkedIn: <a href="https://www.linkedin.com/in/smit-wandre-9911802b3" target="_blank" rel="noopener noreferrer">smitwandre</a>
         </ContactInfo>
         <ContactInfo>
-          GitHub:{' '}
-          <a href="https://github.com/smitwandre" target="_blank" rel="noopener noreferrer">
-            smitwandre
-          </a>
+          GitHub: <a href="https://github.com/SmitWandre" target="_blank" rel="noopener noreferrer">SmitWandre</a>
         </ContactInfo>
       </ContactSection>
     </PageContainer>
