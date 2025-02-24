@@ -24,7 +24,7 @@ const PageContainer = styled.div`
 // Base section style with reduced padding
 const Section = styled(motion.section)`
   min-height: 100vh;
-  padding: 2rem 1rem;  /* Reduced vertical padding */
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,8 +32,10 @@ const Section = styled(motion.section)`
 `;
 
 // ----- HERO SECTION ----- //
+// Overriding the top padding to reduce spacing between the menu and hero section.
 const HeroSection = styled(Section)`
   background: #111;
+  padding-top: 1rem; /* Reduced top padding */
   animation: ${fadeIn} 1s ease-out;
   flex-direction: row;
   align-items: center;
@@ -309,10 +311,16 @@ introduce()`}
           Email: <a href="mailto:smit@example.com">smit@example.com</a>
         </ContactInfo>
         <ContactInfo>
-          LinkedIn: <a href="https://www.linkedin.com/in/smitwandre" target="_blank" rel="noopener noreferrer">smitwandre</a>
+          LinkedIn:{' '}
+          <a href="https://www.linkedin.com/in/smitwandre" target="_blank" rel="noopener noreferrer">
+            smitwandre
+          </a>
         </ContactInfo>
         <ContactInfo>
-          GitHub: <a href="https://github.com/smitwandre" target="_blank" rel="noopener noreferrer">smitwandre</a>
+          GitHub:{' '}
+          <a href="https://github.com/smitwandre" target="_blank" rel="noopener noreferrer">
+            smitwandre
+          </a>
         </ContactInfo>
       </ContactSection>
     </PageContainer>
