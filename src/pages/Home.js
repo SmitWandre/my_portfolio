@@ -294,10 +294,6 @@ introduce()`}
             <p>Git</p>
           </SkillItem>
           <SkillItem>
-            <SiFlask />
-            <p>Flask</p>
-          </SkillItem>
-          <SkillItem>
             <SiStreamlit />
             <p>Streamlit</p>
           </SkillItem>
