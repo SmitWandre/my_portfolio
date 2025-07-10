@@ -3,8 +3,8 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import { ReactTyped } from 'react-typed'; // named export from react-typed
-import { FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt, FaGit, FaLaptopCode } from 'react-icons/fa';
-import { SiC, SiRuby, SiFlask, SiStreamlit } from 'react-icons/si';
+import { FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt, FaGit, FaLaptopCode, FaDocker, FaFlask } from 'react-icons/fa';
+import { SiC, SiRuby, SiFlask, SiStreamlit, SiCelery, SiDjango } from 'react-icons/si';
 import pfp from '../assets/pfp.JPG'; // Ensure filename & case match exactly
 
 // Fade-in animation for sections
@@ -270,6 +270,18 @@ introduce()`}
             <p>JavaScript</p>
           </SkillItem>
           <SkillItem>
+            <SiDjango />
+            <p>Django</p>
+          </SkillItem>
+          <SkillItem>
+            <FaFlask />
+            <p>Flask</p>
+          </SkillItem>
+          <SkillItem>
+            <FaDocker />
+            <p>Docker</p>
+          </SkillItem>
+          <SkillItem>
             <FaReact />
             <p>React</p>
           </SkillItem>
@@ -284,6 +296,10 @@ introduce()`}
           <SkillItem>
             <SiC />
             <p>C</p>
+          </SkillItem>
+          <SkillItem>
+            <SiCelery />
+            <p>Celery</p>
           </SkillItem>
           <SkillItem>
             <SiRuby />

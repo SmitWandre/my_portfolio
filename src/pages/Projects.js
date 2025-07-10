@@ -71,6 +71,15 @@ const Projects = () => {
         <ProjectsHeading>My Projects</ProjectsHeading>
         <ProjectGrid>
           <ProjectCard>
+            <ProjectTitle>Sensor Anomaly Detection</ProjectTitle>
+            <ProjectDescription>
+              An end-to-end web app that ingests timestamped temperature and humidity CSV data, uses Django and Celery to asynchronously and automatically resample hourly readings and apply K-Means clustering, then visualizes normal versus anomalous hours in React via Recharts and PapaParse. Fully containerized with Docker Compose for consistent, production-ready development and deployment.
+            </ProjectDescription>
+            <ProjectLink href="https://github.com/SmitWandre/sensor_anomaly_detection" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+            </ProjectLink>
+          </ProjectCard>
+          <ProjectCard>
             <ProjectTitle>Crop Yield Prediction</ProjectTitle>
             <ProjectDescription>
               This project predicts crop yields using environmental data like temperature, rainfall, and soil quality. A linear regression model was developed, trained, and evaluated. An interactive Flask frontend with Plotly graphs displays predictions dynamically. It showcases full-stack machine learning development from data processing to web deployment in Python with modern techniques.
