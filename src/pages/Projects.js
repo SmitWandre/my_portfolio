@@ -71,6 +71,15 @@ const Projects = () => {
         <ProjectsHeading>My Projects</ProjectsHeading>
         <ProjectGrid>
           <ProjectCard>
+            <ProjectTitle>Squad Running App</ProjectTitle>
+            <ProjectDescription>
+              SquadRun is a social running accountability app that helps runners stay motivated by joining squads, tracking runs, competing on leaderboards, and achieving weekly goals together. Built for runners who thrive on community and friendly competition.
+            </ProjectDescription>
+            <ProjectLink href="https://github.com/SmitWandre/SquadRunna" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+            </ProjectLink>
+          </ProjectCard>
+          <ProjectCard>
             <ProjectTitle>Sensor Anomaly Detection</ProjectTitle>
             <ProjectDescription>
               An end-to-end web app that ingests timestamped temperature and humidity CSV data, uses Django and Celery to asynchronously and automatically resample hourly readings and apply K-Means clustering, then visualizes normal versus anomalous hours in React via Recharts and PapaParse. Fully containerized with Docker Compose for consistent, production-ready development and deployment.
