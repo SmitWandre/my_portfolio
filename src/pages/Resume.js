@@ -84,7 +84,7 @@ const Resume = () => {
         {showResume && (
           <IframeContainer>
             <iframe
-              src="/autoCV.pdf"
+              src="/resume:cv.pdf"
               title="My Resume"
               width="100%"
               height="100%"
